@@ -1,0 +1,11 @@
+<h1>show note <%= @note.id %> details</h1>
+<hr>
+
+<p><strong>Title: </strong><%= @note.note %></p>
+<p><strong>Description: </strong><%= @note.description %></p>
+
+<div>
+  <%= link_to "Edit", edit_note_path(@note) %> |
+  <%= link_to "Delete", note_path(@note), data: {turbo_method: :delete, turbo_confirm: "Delete Article #{@note.id} - #{@note.note}? \nAre you sure?" } %> |
+  <%= link_to "Article Listings", notes_path() %>
+</div>

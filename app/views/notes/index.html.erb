@@ -1,0 +1,19 @@
+<h1>index</h1>
+<hr>
+<p>
+  list of notes
+</p>
+
+<ul>
+  <% @notes.each do |note| %>
+    <li>
+      <%= link_to note.note, note %>
+    </li>
+  <% end %>
+</ul>
+
+<p>
+  <%= link_to "New note", new_note_path %> |
+  <%= link_to 'Home', root_path %> | 
+  <%= link_to 'About', about_path %>
+</p>
